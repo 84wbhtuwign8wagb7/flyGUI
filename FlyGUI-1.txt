@@ -1,6 +1,6 @@
 -- Gui to Lua
 
--- Version: CrackedByNoMercy
+-- Version: CrackedByFerestz
 
 
 -- Instances:
@@ -123,7 +123,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.Position = UDim2.new(0.53, 0, 0.10, 0)
 TextLabel.Size = UDim2.new(0, 180, 0, 28)
 TextLabel.Font = Enum.Font.GothamBlack
-TextLabel.Text = "Devilish W?"
+TextLabel.Text = "FerestZ W?"
 TextLabel.TextColor3 = Color3.fromRGB(217, 28, 235)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
@@ -135,7 +135,7 @@ TextLabel1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel1.Position = UDim2.new(0.275, 0, 0.1, 0)
 TextLabel1.Size = UDim2.new(0, 180, 0, 20)
 TextLabel1.Font = Enum.Font.GothamBlack
-TextLabel1.Text = "NoMercy Fly GUI"
+TextLabel1.Text = "FerestZ Fly GUI"
 TextLabel1.TextColor3 = Color3.fromRGB(217, 28, 235)
 TextLabel1.TextScaled = true
 TextLabel1.TextSize = 14.000
@@ -190,17 +190,6 @@ local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 
 nowe = false
 
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "Devilish on top :)";
-	Text = "fly gui Cracked by NoMercy";
-	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-Duration = 16;
-
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "Remember!";
-	Text = "whoztokyo#1274 Is Gay!";
-	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-Duration = 16;
 
 
 Frame2.Active = true -- main = gui
