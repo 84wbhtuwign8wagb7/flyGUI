@@ -1,858 +1,212 @@
-
-
--- By: Papyrk
-
-
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
-
-
-local closeopen = Instance.new("TextButton")
-
-local main = Instance.new("ScreenGui")
-
-local Frame = Instance.new("Frame")
-
-local Frame2 = Instance.new("Frame")
-
-local onof = Instance.new("TextButton")
-
-local TextLabel1 = Instance.new("TextLabel")
-
-local closeopen2 = Instance.new("TextButton")
-
-
-
---home
-
-local home = Instance.new("TextButton")
-
-local AutoFarm = Instance.new("TextButton")
-
-local home1 = Instance.new("ScrollingFrame")
-
-local AutoF = Instance.new("ScrollingFrame")
-
-local Soon = Instance.new("TextLabel")
-
-
-
-local WorldOne = Instance.new("TextLabel")
-
-local Bank = Instance.new("TextButton")
-
-local Jewelry = Instance.new("TextButton")
-
-local Technic = Instance.new("TextButton")
-
-local Casino = Instance.new("TextButton")
-
-local Sell = Instance.new("TextButton")
-
-local Shop = Instance.new("TextButton")
-
-
-
-local WorldTwo = Instance.new("TextLabel")
-
-local Museum = Instance.new("TextButton")
-
-local Furniture = Instance.new("TextButton")
-
-local Clothing = Instance.new("TextButton")
-
-local Sell1 = Instance.new("TextButton")
-
-local Shop1 = Instance.new("TextButton")
-
-local Parking = Instance.new("TextButton")
-
-local Museum2 = Instance.new("TextButton")
+local FZ = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local HomeButton = Instance.new("ImageButton")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local Executor = Instance.new("ImageButton")
+local ScriptHub = Instance.new("ImageButton")
+local CloseButton = Instance.new("ImageButton")
+local ImageButton = Instance.new("ImageButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Script1 = Instance.new("TextButton")
+local Script2 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ExecutorScroll = Instance.new("ScrollingFrame")
+local TextBox = Instance.new("TextBox")
+local ExecuteButton = Instance.new("ImageButton")
 
 --Properties:
 
-
-
-AutoFarm.Name = "AutoFarm"
-
-AutoFarm.Parent = Frame
-
-AutoFarm.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-AutoFarm.Position = UDim2.new(0.02, 0, 0.3, 0)
-
-AutoFarm.Size = UDim2.new(0.25, 0, 0.2, 0)
-
-AutoFarm.Font = Enum.Font.GothamBlack
-
-AutoFarm.Text = "Auto Farm"
-
-AutoFarm.TextSize = 20.000
-
-AutoFarm.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-AutoFarm.MouseButton1Click:Connect(function()
-
-	if home1.Visible == true then
-
-	home1.Visible = false
-
-	end	
-
-end)
-
-AutoFarm.MouseButton1Click:Connect(function()
-
-	if AutoF.Visible == false then
-
-	AutoF.Visible = true
-
-	end	
-
-end)
-
-
-
-
-
-
-
-
-
-home.Name = "home"
-
-home.Parent = Frame
-
-home.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-home.Position = UDim2.new(0.02, 0, 0.03, 0)
-
-home.Size = UDim2.new(0.25, 0, 0.2, 0)
-
-home.Font = Enum.Font.GothamBlack
-
-home.Text = "Teleport"
-
-home.TextSize = 23.000
-
-home.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-home.MouseButton1Click:Connect(function()
-
-	if 	home1.Visible == false then 
-
-		home1.Visible = true
-
-	end	
-
-end) 
-
-home.MouseButton1Click:Connect(function()
-
-	if 	AutoF.Visible == true then 
-
-		AutoF.Visible = false
-
-	end	
-
-end) 
-
-
-
-
-
-home1.Name = "home1"
-
-home1.Parent = home
-
-home1.Position = UDim2.new(1.055, 0, 0, 0)
-
-home1.Size = UDim2.new(2.785, 0, 4.66, 0)
-
-home1.CanvasSize = UDim2.new(0, 0, 8, 0)
-
-home1.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-
-
-
-AutoF.Name = "AutoF"
-
-AutoF.Parent = AutoFarm
-
-AutoF.Position = UDim2.new(1.055, 0, -1.345, 0)
-
-AutoF.Size = UDim2.new(2.785, 0, 4.66, 0)
-
-AutoF.CanvasSize = UDim2.new(0, 0, 8, 0)
-
-AutoF.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-
-
-
-Soon.Name = "Soon"
-
-Soon.Parent = AutoF
-
-Soon.Position = UDim2.new(0, 0, 0.15, 0)
-
-Soon.Size = UDim2.new(1, 0, 0.1, 0)
-
-Soon.Font = Enum.Font.GothamBlack
-
-Soon.Text = " Auto Farm Soon!..."
-
-Soon.TextColor3 = Color3.fromRGB(3, 148, 252)
-
-Soon.TextScaled = true
-
-Soon.TextSize = 30.000
-
-Soon.TextWrapped = true
-
-Soon.BorderColor3 = Color3.fromRGB(56, 56, 56)
-
-
-
-WorldOne.Parent = home1
-
-WorldOne.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-
-WorldOne.Position = UDim2.new(0.25, 0, 0.02, 0)
-
-WorldOne.Size = UDim2.new(0.5, 0, 0.05, 0)
-
-WorldOne.Font = Enum.Font.GothamBlack
-
-WorldOne.Text = "World One"
-
-WorldOne.TextColor3 = Color3.fromRGB(3, 148, 252)
-
-WorldOne.TextScaled = true
-
-WorldOne.TextSize = 30.000
-
-WorldOne.TextWrapped = true
-
-WorldOne.BorderColor3 = Color3.fromRGB(56, 56, 56)
-
-
-
-WorldTwo.Parent = home1
-
-WorldTwo.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-
-WorldTwo.Position = UDim2.new(0.25, 0, 0.54, 0)
-
-WorldTwo.Size = UDim2.new(0.5, 0, 0.05, 0)
-
-WorldTwo.Font = Enum.Font.GothamBlack
-
-WorldTwo.Text = "World Two"
-
-WorldTwo.TextColor3 = Color3.fromRGB(3, 148, 252)
-
-WorldTwo.TextScaled = true
-
-WorldTwo.TextSize = 30.000
-
-WorldTwo.TextWrapped = true
-
-WorldTwo.BorderColor3 = Color3.fromRGB(56, 56, 56)
-
-
-
-Museum.Name = "Museum"
-
-Museum.Parent = home1
-
-Museum.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Museum.Position = UDim2.new(0.5, 0, 0.61, 0)
-
-Museum.Size = UDim2.new(0.18, 0, 0.1, 0)
-
-Museum.Font = Enum.Font.GothamBlack
-
-Museum.Text = "Museum Start"
-
-Museum.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Museum.TextSize = 7.000
-
-Museum.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Museum.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(-232.1019287109375, 47.4983024597168, 29.261226654052734)
-
-end)
-
-
-
-Museum2.Name = "Museum2"
-
-Museum2.Parent = home1
-
-Museum2.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Museum2.Position = UDim2.new(0.72, 0, 0.61, 0)
-
-Museum2.Size = UDim2.new(0.18, 0, 0.1, 0)
-
-Museum2.Font = Enum.Font.GothamBlack
-
-Museum2.Text = "Museum End"
-
-Museum2.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Museum2.TextSize = 7.000
-
-Museum2.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Museum2.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(-155.11056518554688, -21.10000228881836, 43.77487564086914)
-
-end)
-
-
-
-
-
-
-
-
-
-Furniture.Name = "Furniture"
-
-Furniture.Parent = home1
-
-Furniture.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Furniture.Position = UDim2.new(0.05, 0, 0.755, 0)
-
-Furniture.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Furniture.Font = Enum.Font.GothamBlack
-
-Furniture.Text = "Furniture"
-
-Furniture.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Furniture.TextSize = 23.000
-
-Furniture.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Furniture.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(279.9993591308594, 4.000003337860107, 321.7061462402344)
-
-end)
-
-
-
-Clothing.Name = "Clothing"
-
-Clothing.Parent = home1
-
-Clothing.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Clothing.Position = UDim2.new(0.05, 0, 0.61, 0)
-
-Clothing.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Clothing.Font = Enum.Font.GothamBlack
-
-Clothing.Text = "Clothing Store"
-
-Clothing.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Clothing.TextSize = 15.000
-
-Clothing.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Clothing.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(-163.48597717285156, 4.000003337860107, 373.6643371582031)
-
-end)
-
-
-
-Parking.Name = "Clothing"
-
-Parking.Parent = home1
-
-Parking.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Parking.Position = UDim2.new(0.5, 0, 0.755, 0)
-
-Parking.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Parking.Font = Enum.Font.GothamBlack
-
-Parking.Text = "Parking Plot"
-
-Parking.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Parking.TextSize = 15.000
-
-Parking.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Parking.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(192.87322998046875, 4.100004196166992, -156.1176300048828)
-
-end)
-
-
-
-Sell1.Name = "Sell1"
-
-Sell1.Parent = home1
-
-Sell1.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Sell1.Position = UDim2.new(0.05, 0, 0.9, 0)
-
-Sell1.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Sell1.Font = Enum.Font.GothamBlack
-
-Sell1.Text = "Sell"
-
-Sell1.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Sell1.TextSize = 20.000
-
-Sell1.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Sell1.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(177.10501098632812, 4.100003719329834, 168.9899139404297)
-
-end)
-
-
-
-Shop1.Name = "Shop1"
-
-Shop1.Parent = home1
-
-Shop1.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Shop1.Position = UDim2.new(0.5, 0, 0.9, 0)
-
-Shop1.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Shop1.Font = Enum.Font.GothamBlack
-
-Shop1.Text = "Shop"
-
-Shop1.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Shop1.TextSize = 20.000
-
-Shop1.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Shop1.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(177.18313598632812, 4.100003719329834, 132.02957153320312)
-
-end)
-
-
-
-
-
-
-
-Bank.Name = "Bank"
-
-Bank.Parent = home1
-
-Bank.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Bank.Position = UDim2.new(0.05, 0, 0.1, 0)
-
-Bank.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Bank.Font = Enum.Font.GothamBlack
-
-Bank.Text = "Bank Start"
-
-Bank.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Bank.TextSize = 15.000
-
-Bank.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Bank.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(-216.27745056152344, 133.1417236328125, -83.82737731933594)
-
-end)
-
-
-
-
-
-
-
-Jewelry.Name = "Jewelry"
-
-Jewelry.Parent = home1
-
-Jewelry.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Jewelry.Position = UDim2.new(0.5, 0, 0.1, 0)
-
-Jewelry.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Jewelry.Font = Enum.Font.GothamBlack
-
-Jewelry.Text = "Jewelry"
-
-Jewelry.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Jewelry.TextSize = 23.000
-
-Jewelry.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Jewelry.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(-133.20452880859375, 131.26361083984375, -234.5425262451172)
-
-end)
-
-
-
-Technic.Name = "Technic"
-
-Technic.Parent = home1
-
-Technic.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Technic.Position = UDim2.new(0.05, 0, 0.25, 0)
-
-Technic.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Technic.Font = Enum.Font.GothamBlack
-
-Technic.Text = "Tech Store"
-
-Technic.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Technic.TextSize = 18.000
-
-Technic.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Technic.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(418.4027099609375, 131.4236297607422, -237.65818786621094)
-
-end)
-
-
-
-Casino.Name = "Casino"
-
-Casino.Parent = home1
-
-Casino.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Casino.Position = UDim2.new(0.5, 0, 0.25, 0)
-
-Casino.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Casino.Font = Enum.Font.GothamBlack
-
-Casino.Text = "Betting Store"
-
-Casino.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Casino.TextSize = 18.000
-
-Casino.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Casino.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(177.61219787597656, 131.26364135742188, 142.24740600585938)
-
-end)
-
-
-
-Sell.Name = "Sell"
-
-Sell.Parent = home1
-
-Sell.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Sell.Position = UDim2.new(0.05, 0, 0.4, 0)
-
-Sell.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Sell.Font = Enum.Font.GothamBlack
-
-Sell.Text = "Sell"
-
-Sell.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Sell.TextSize = 20.000
-
-Sell.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Sell.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(-7.327607154846191, 131.46359252929688, 483.69091796875)
-
-end)
-
-
-
-Shop.Name = "Shop"
-
-Shop.Parent = home1
-
-Shop.BackgroundColor3 = Color3.fromRGB(3, 148, 252)
-
-Shop.Position = UDim2.new(0.5, 0, 0.4, 0)
-
-Shop.Size = UDim2.new(0.4, 0, 0.1, 0)
-
-Shop.Font = Enum.Font.GothamBlack
-
-Shop.Text = "Shop"
-
-Shop.TextColor3 = Color3.fromRGB(0, 0, 0)
-
-Shop.TextSize = 20.000
-
-Shop.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Shop.MouseButton1Click:Connect(function()
-
-  local player = game.Players.LocalPlayer
-
-  player.Character.HumanoidRootPart.CFrame = CFrame.new(33.12432098388672, 131.463623046875, 483.6141662597656)
-
-end)
-
-
-
-
-
-
-
-Frame2.Name = "Frame2"
-
-Frame2.Parent = main
-
-Frame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-
-Frame2.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Frame2.Position = UDim2.new(0.12, 0, 0, 0)
-
-Frame2.Size = UDim2.new(0, 400, 0, 27)
-
-
-
-closeopen.Name = "closeopen"
-
-closeopen.Parent = Frame2
-
-closeopen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-
-closeopen.Position = UDim2.new(0.8675, 0, 0.03, 0)
-
-closeopen.Size = UDim2.new(0, 25, 0, 25)
-
-closeopen.Font = Enum.Font.GothamBlack
-
-closeopen.Text = "-"
-
-closeopen.TextColor3 = Color3.fromRGB(140, 7, 7)
-
-closeopen.TextSize = 23.000
-
-closeopen.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-closeopen.MouseButton1Click:Connect(function()
-
-	if 	Frame.Visible == false then 
-
-		Frame.Visible = true
-
-		elseif Frame.Visible == true then
-
-		Frame.Visible = false
-
-	end	
-
-end)
-
-
-
-
-
-
-
-closeopen2.Name = "closeopen"
-
-closeopen2.Parent = Frame2
-
-closeopen2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-
-closeopen2.Position = UDim2.new(0.937, 0, 0.04, 0)
-
-closeopen2.Size = UDim2.new(0, 25, 0, 25)
-
-closeopen2.Font = Enum.Font.GothamBlack
-
-closeopen2.Text = "x"
-
-closeopen2.TextColor3 = Color3.fromRGB(140, 7, 7)
-
-closeopen2.TextSize = 23.000
-
-closeopen2.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-closeopen2.MouseButton1Click:Connect(function()
-
-	if 	Frame2.Visible == false then 
-
-		Frame2.Visible = true
-
-	elseif Frame2.Visible == true then
-
-	Frame2.Visible = false
-
-	end	
-
-end)
-
-
-
-
-
-
-
-main.Name = "main"
-
-main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-
-
-Frame.Name = "Frame"
-
-Frame.Parent = Frame2
-
-Frame.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-
-Frame.BorderColor3 = Color3.fromRGB(3, 148, 252)
-
-Frame.Position = UDim2.new(0, 0, 1.1, 0)
-
-Frame.Size = UDim2.new(0, 400, 0, 200)
-
-
-
-TextLabel1.Parent = Frame2
-
-TextLabel1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-
-TextLabel1.Position = UDim2.new(0.275, 0, 0.1, 0)
-
-TextLabel1.Size = UDim2.new(0, 180, 0, 20)
-
-TextLabel1.Font = Enum.Font.GothamBlack
-
-TextLabel1.Text = "THIEF SIMULATOR GUI"
-
-TextLabel1.TextColor3 = Color3.fromRGB(3, 148, 252)
-
-TextLabel1.TextScaled = true
-
-TextLabel1.TextSize = 14.000
-
-TextLabel1.TextWrapped = true
-
-TextLabel1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-
-
-
-local speaker = game:GetService("Players").LocalPlayer
-
-
-
-local chr = game.Players.LocalPlayer.Character
-
-local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
-
-
-
-nowe = false
-
-
-
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-
-	Title = "Papyrk on top :)";
-
-	Text = "GUI by FerestZ";
-
-	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-
-Duration = 16;
-
-
-
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-
-	Title = "Remember!";
-
-	Text = "Dont be Dumb and make it too offensive!";
-
-	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-
-Duration = 16;
-
-
-
-
-
-Frame2.Active = true -- main = gui
-
-Frame2.Draggable = true
-
-
-
+FZ.Name = "FZ"
+FZ.Parent = game:GetService("CoreGui")
+
+ImageLabel.Parent = FZ
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.05183791, 0, 0.136734709, 0)
+ImageLabel.Size = UDim2.new(0, 445, 0, 303)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=9412549574"
+
+HomeButton.Name = "HomeButton"
+HomeButton.Parent = ImageLabel
+HomeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HomeButton.BackgroundTransparency = 1.000
+HomeButton.Position = UDim2.new(0.370027006, 0, 0.118811905, 0)
+HomeButton.Size = UDim2.new(0, 28, 0, 29)
+HomeButton.Image = "http://www.roblox.com/asset/?id=11154497688"
+
+ImageLabel_2.Parent = ImageLabel
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Position = UDim2.new(-0.000309221912, 0, 0.214521453, 0)
+ImageLabel_2.Size = UDim2.new(0, 386, 0, 220)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=9420061099"
+
+Executor.Name = "Executor"
+Executor.Parent = ImageLabel
+Executor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Executor.BackgroundTransparency = 1.000
+Executor.Position = UDim2.new(0.451422364, 0, 0.118811905, 0)
+Executor.Size = UDim2.new(0, 28, 0, 29)
+Executor.Image = "http://www.roblox.com/asset/?id=11154498174"
+
+ScriptHub.Name = "ScriptHub"
+ScriptHub.Parent = ImageLabel
+ScriptHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHub.BackgroundTransparency = 1.000
+ScriptHub.Position = UDim2.new(0.534755707, 0, 0.118811905, 0)
+ScriptHub.Size = UDim2.new(0, 28, 0, 29)
+ScriptHub.Image = "http://www.roblox.com/asset/?id=11154498614"
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = ImageLabel
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.BackgroundTransparency = 1.000
+CloseButton.Position = UDim2.new(0.945608437, 0, 0.0495049767, 0)
+CloseButton.Size = UDim2.new(0, 13, 0, 14)
+CloseButton.Image = "http://www.roblox.com/asset/?id=11154524913"
+
+ImageButton.Parent = ImageLabel
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Position = UDim2.new(0.868106604, 0, 0.578427851, 0)
+ImageButton.Size = UDim2.new(0, 34, 0, 33)
+ImageButton.Image = "http://www.roblox.com/asset/?id=11154610176"
+
+ScrollingFrame.Parent = ImageLabel
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(0.0468160212, 0, 0.260726035, 0)
+ScrollingFrame.Size = UDim2.new(0, 344, 0, 185)
+ScrollingFrame.Visible = false
+
+Script1.Name = "Script1"
+Script1.Parent = ScrollingFrame
+Script1.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+Script1.BackgroundTransparency = 1.000
+Script1.BorderColor3 = Color3.fromRGB(136, 136, 136)
+Script1.Position = UDim2.new(0.0066370368, 0, 0.00772798806, 0)
+Script1.Size = UDim2.new(0, 169, 0, 35)
+Script1.Font = Enum.Font.Kalam
+Script1.Text = "1. Infinite Yield"
+Script1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script1.TextSize = 40.000
+Script1.TextWrapped = true
+
+Script2.Name = "Script2"
+Script2.Parent = ScrollingFrame
+Script2.BackgroundColor3 = Color3.fromRGB(136, 136, 136)
+Script2.BackgroundTransparency = 1.000
+Script2.BorderColor3 = Color3.fromRGB(136, 136, 136)
+Script2.Position = UDim2.new(0.00663704099, 0, 0.0642017126, 0)
+Script2.Size = UDim2.new(0, 195, 0, 35)
+Script2.Font = Enum.Font.Kalam
+Script2.Text = "2. Blox Fruits Gui"
+Script2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Script2.TextSize = 40.000
+Script2.TextWrapped = true
+
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0.0495049506, 0)
+TextLabel.Size = UDim2.new(0, 142, 0, 50)
+TextLabel.Font = Enum.Font.Kalam
+TextLabel.Text = "FerestZ"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 40.000
+
+ExecutorScroll.Name = "ExecutorScroll"
+ExecutorScroll.Parent = ImageLabel
+ExecutorScroll.Active = true
+ExecutorScroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecutorScroll.BackgroundTransparency = 1.000
+ExecutorScroll.Position = UDim2.new(0.0471910127, 0, 0.280528009, 0)
+ExecutorScroll.Size = UDim2.new(0, 345, 0, 183)
+ExecutorScroll.Visible = false
+
+TextBox.Parent = ExecutorScroll
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Position = UDim2.new(0.00869565178, 0, 0, 0)
+TextBox.Size = UDim2.new(0, 322, 0, 182)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = "Put Your Scripts Here"
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 20.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+ExecuteButton.Name = "ExecuteButton"
+ExecuteButton.Parent = ImageLabel
+ExecuteButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExecuteButton.BackgroundTransparency = 1.000
+ExecuteButton.Position = UDim2.new(0.867999971, 0, 0.416999996, 0)
+ExecuteButton.Size = UDim2.new(0, 34, 0, 33)
+ExecuteButton.Image = "http://www.roblox.com/asset/?id=11154610565"
+
+-- Scripts:
+
+local function FCJAOJI_fake_script() -- ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	local script1 = script.Parent.Script1
+	local script2 = script.Parent.Script2
+	
+	script1.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+	
+	
+	script2.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/xQuartyx/DonateMe/main/ScriptLoader")()
+	end)
+end
+coroutine.wrap(FCJAOJI_fake_script)()
+local function UYPFPGR_fake_script() -- ImageLabel.MainGuiScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local mainGui = script.Parent
+	local scriptHubButton = mainGui.ScriptHub
+	local homeButton = mainGui.HomeButton
+	local close = mainGui.CloseButton
+	local executorScroll = mainGui.ExecutorScroll
+	local executor = mainGui.Executor
+	
+	scriptHubButton.MouseButton1Click:Connect(function()
+		mainGui.ScrollingFrame.Visible = true
+		executorScroll.Visible = false
+	end)
+	
+	
+	homeButton.MouseButton1Click:Connect(function()
+		mainGui.ScrollingFrame.Visible = false
+		executorScroll.Visible = false
+	end)
+	
+	executor.MouseButton1Click:Connect(function()
+		executorScroll.Visible = true
+		mainGui.ScrollingFrame.Visible = false
+	end)
+	
+	
+	close.MouseButton1Click:Connect(function()
+	mainGui.Parent:Destroy()
+	end)
+	
+	ExecuteButton.MouseButton1Click:Connect(function()
+	loadstring(TextBox.Text)()
+	end)
+	
+	
+	script.Parent.Active = true
+	script.Parent.Selectable = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(UYPFPGR_fake_script)()
